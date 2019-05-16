@@ -4,7 +4,7 @@
           <h3 style="text-align:center">FoodPetControlerByHTML</h3>
         </div>
         <div id=data>
-          ---
+          12
         </div>
         <div>
           <p><b>ปริมาณอาหารที่เหลืออยู่ :</b> <span id=food_v></span></p><br>
