@@ -42,10 +42,10 @@
           document.getElementById("data").innerHTML=topie+""+msg;
 
           if (msg.substring(0,5)=="sonar") {
-          document.getElementById("food_v").innerHTML=msg.substring(5,msg.length);
+            document.getElementById("food_v").innerHTML=msg.substring(5,msg.length);
           var sonar=parseInt(msg.substring(5,msg.length));
             if (sonar<=10) {
-            
+              alert('กรุณาเติมอาหาร');
             }
         }else if (msg.substring(2,3)=="h") {
           //h21,m23,fv0.1  {"hour_ch":15,"min_ch":20,"food_vol":0.5}
@@ -55,7 +55,7 @@
 
         }else if (msg.substring(0,4)=="Time") {
           //sqlinser
-          window.location='inser.php?food_v=1.2';
+          window.location='inser.php?food_v='+obj.food_vol;
         }
         }
       });
