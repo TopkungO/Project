@@ -128,7 +128,10 @@
 </div>
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
-    <a class="nav-link active" href="Control.php">Home</a>
+    <a class="nav-link active" href="index.php">Home</a>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <a class="nav-link active" href="Control.php">ตั้งเวลาให้อาหาร</a>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     <a class="nav-link" href="history.php">ประวัติการให้อาหาร</a>

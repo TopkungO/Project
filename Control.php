@@ -1,7 +1,7 @@
 <?php include('header.php'); ?>
     <div class="container">
       <div class="head_body">
-          <h3 style="text-align:center">FoodPetControlerByNetpie</h3>
+          <h2 style="text-align:center">FoodPetControlerByNetpie</h2>
         </div>
         <div id=data>
           --

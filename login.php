@@ -77,7 +77,7 @@
           $row =$result->fetch_assoc();
           $_SESSION['id']=$row['id'];
           $_SESSION['name']=$row['name'];
-          header('location:Control.php');
+          header('location:index.php');
         }else{
           echo "string";
         }
