@@ -16,7 +16,7 @@
 
   }
   .header_index img{
-    float: left;
+    float:left;
     margin-left: 15%;
     width: 80px;
     height: 80px;
@@ -29,7 +29,14 @@
   .body_index{
     background-color: rgba(43, 173, 198, 0.55);
     text-indent: 50px;
+    padding-top: 100px;
   }
+  .foot_name{
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    height: auto;
+  }
+
   p{
     text-align: center;
     font-size: 20px;

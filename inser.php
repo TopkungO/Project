@@ -4,6 +4,8 @@
     date_default_timezone_set("Asia/Bangkok");
     $hour=date("Y-m-d h:i:s");
     $sql="INSERT INTO foodvol(device_id,date_food,food_vol) VALUES('NodeMCU','$hour','$objfood')";
+    echo $sql;
+    echo $objfood;
     if (mysqli_query($mysqli,$sql)) {
       echo "<script>";
       echo "alert('บันทึกข้อมูลเรียบร้อยแล้ว');";

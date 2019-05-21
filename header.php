@@ -45,7 +45,7 @@
             document.getElementById("food_v").innerHTML=msg.substring(5,msg.length);
           var sonar=parseInt(msg.substring(5,msg.length));
             if (sonar<=10) {
-              alert('กรุณาเติมอาหาร');
+              alert('กรุณาเติมอาหาร'),3000;
             }
         }else if (msg.substring(2,3)=="h") {
           //h21,m23,fv0.1  {"hour_ch":15,"min_ch":20,"food_vol":0.5}
@@ -53,12 +53,14 @@
           document.getElementById("date_food").innerHTML=obj.hour_ch+":"+obj.min_ch+" น.";
           document.getElementById("setfood").innerHTML=obj.food_vol+"กิโลกรัม";
 
-        }else if (msg.substring(0,4)=="Time") {
-          //sqlinser
-          window.location='inser.php?food_v='+obj.food_vol;
+        }else if (msg.substring(0,4)=="Time"){
+          var nn=msg.substring(4,msg.length);
+          window.location="inser.php?food_v="+nn;
+
         }
         }
       });
+
     /*  microgear.on('connected', function() {
             microgear.setAlias(ALIAS);
            document.getElementById("data1").innerHTML = "ได้เชื่อมต่อ netpie แล้ว";
