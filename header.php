@@ -40,12 +40,13 @@
 
         }else {
           document.getElementById("data").innerHTML=topie+""+msg;
+          //document.getElementById("radius").style.background = rgb(10, 255, 0);
 
           if (msg.substring(0,5)=="sonar") {
             document.getElementById("food_v").innerHTML=msg.substring(5,msg.length);
           var sonar=parseInt(msg.substring(5,msg.length));
-            if (sonar<=10) {
-              alert('กรุณาเติมอาหาร'),3000;
+            if (sonar<=3) {
+              //alert('กรุณาเติมอาหาร',60000);
             }
         }else if (msg.substring(2,3)=="h") {
           //h21,m23,fv0.1  {"hour_ch":15,"min_ch":20,"food_vol":0.5}
@@ -55,6 +56,7 @@
 
         }else if (msg.substring(0,4)=="Time"){
           var nn=msg.substring(4,msg.length);
+
           window.location="inser.php?food_v="+nn;
 
         }

@@ -12,6 +12,7 @@
               <p><b>ปริมาณอาหารที่เหลืออยู่ :</b> <span id=food_v></span></p><br>
               <p><b>เวลาที่ตั้งอาหาร :</b><span id=date_food></span></p><br>
               <p><b>ปริมาณอาหารที่กำหนด :</b><span id=setfood></span></p>
+              <!-- สถานะเครื่อง <div id="radius"></div> -->
             </div>
         </div>
         <div class="col-sm-6">
@@ -30,8 +31,8 @@
               </div>
               <div>
                 <label for="">ปริมาณอาหาร</label><br>
-                <input type="range" min="0" max="3" value="" step="0.1" id="sli_food" onclick="myFunction()">
-                <p id="demo" style="margin-left:50px">1.5</p>
+                <input type="range" min="0.00" max="1.00" value="" step="0.01" id="sli_food" onclick="myFunction()">
+                <p id="demo" style="margin-left:50px">0.5</p>
               </div>
 
             </div>

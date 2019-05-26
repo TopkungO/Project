@@ -36,7 +36,14 @@
     background-color: rgb(255, 0, 0);
     height: auto;
   }
-
+  #radius {
+  border-radius: 70px;
+  background: rgb(255, 0, 0);
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-right: 15px;
+}
   p{
     text-align: center;
     font-size: 20px;
