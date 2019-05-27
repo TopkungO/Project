@@ -12,7 +12,7 @@
               <p><b>ปริมาณอาหารที่เหลืออยู่ :</b> <span id=food_v></span></p><br>
               <p><b>เวลาที่ตั้งอาหาร :</b><span id=date_food></span></p><br>
               <p><b>ปริมาณอาหารที่กำหนด :</b><span id=setfood></span></p>
-              <!-- สถานะเครื่อง <div id="radius"></div> -->
+              <p><b>นำ้หนัก :</b><span id=load_call></span></p>
             </div>
         </div>
         <div class="col-sm-6">

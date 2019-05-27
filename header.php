@@ -7,13 +7,14 @@
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- bootstrap -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
-
+      <!-- time -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/css/bootstrap-material-datetimepicker.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -21,7 +22,14 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/js/bootstrap-material-datetimepicker.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/ja.js"></script>
 
-    <script src="https://cdn.netpie.io/microgear.js"></script>
+      <!-- chart -->
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="http://code.highcharts.com/highcharts.js"></script>
+      <script src="http://code.highcharts.com/modules/exporting.js"></script>
+      <script src="charts.js"></script>
+
+      <!-- netpie -->
+      <script src="https://cdn.netpie.io/microgear.js"></script>
     <script>
       const APPID     ='FoodPet';
       const KEY    ='Cm6tQwcUVesdJSW';
@@ -40,10 +48,9 @@
 
         }else {
           document.getElementById("data").innerHTML=topie+""+msg;
-          //document.getElementById("radius").style.background = rgb(10, 255, 0);
 
           if (msg.substring(0,5)=="sonar") {
-            document.getElementById("food_v").innerHTML=msg.substring(5,msg.length);
+            document.getElementById("food_v").innerHTML=msg.substring(5,msg.length)+"Cm";
           var sonar=parseInt(msg.substring(5,msg.length));
             if (sonar<=3) {
               //alert('กรุณาเติมอาหาร',60000);
@@ -53,6 +60,7 @@
           var obj = JSON.parse(msg);
           document.getElementById("date_food").innerHTML=obj.hour_ch+":"+obj.min_ch+" น.";
           document.getElementById("setfood").innerHTML=obj.food_vol+"กิโลกรัม";
+          document.getElementById("load_call").innerHTML=obj.load.toFixed(2)+"กิโลกรัม";
 
         }else if (msg.substring(0,4)=="Time"){
           var nn=msg.substring(4,msg.length);

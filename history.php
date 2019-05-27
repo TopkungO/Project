@@ -3,6 +3,21 @@
   require_once("pagination.php");
   include("header.php");
 ?>
+<script type="text/javascript">
+$(function () {
+    // ดึงข้อมูลจากฐานข้อมูลสร้างตัวแปร object series ข้อมูลสำหรับใช้งาน
+    $.getJSON( "series_db.php",{
+        year:'2019' // ส่งค่าตัวแปร ไปถ้ามี ในที่นี้ ส่งปีไป เพราะจะดูข้อมูลรายเดือนของปีที่ก่ำหนด
+    },function(data) {
+            var dataSeries=data; // รับค่าข้อมูลตัวแปร object series
+            $('#hc_container').highcharts(
+                $.extend(chartOptions,{
+                    series:dataSeries
+                })
+            );
+    });
+});
+</script>
 
 
     <div class="container">
@@ -63,6 +78,11 @@
           </div>
         </div>
 
+
+    </div>
+    <!-- charst -->
+    <div style="width:80%;margin:auto; margin-top:5%;">
+      <div id="hc_container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
     </div>
   </body>
