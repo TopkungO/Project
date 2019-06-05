@@ -13,7 +13,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-
       <!-- time -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-datetimepicker/2.7.1/css/bootstrap-material-datetimepicker.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -53,7 +52,7 @@
             document.getElementById("food_v").innerHTML=msg.substring(5,msg.length)+"Cm";
           var sonar=parseInt(msg.substring(5,msg.length));
             if (sonar<=3) {
-              //alert('กรุณาเติมอาหาร',60000);
+              alert('กรุณาเติมอาหาร',3600000);
             }
         }else if (msg.substring(2,3)=="h") {
           //h21,m23,fv0.1  {"hour_ch":15,"min_ch":20,"food_vol":0.5}
@@ -113,6 +112,32 @@
       });
     });
 
+      /*นาฬิกา*/
+    $(function(){
+      <?php date_default_timezone_set("Asia/Bangkok"); ?>
+    var nowDateTime=new Date("<?=date("m/d/Y H:i:s");?>");
+    var d=nowDateTime.getTime();
+    var mkHour,mkMinute,mkSecond;
+     setInterval(function(){
+        d=parseInt(d)+1000;
+        var nowDateTime=new Date(d);
+        mkHour=new String(nowDateTime.getHours());
+        if(mkHour.length==1){
+            mkHour="0"+mkHour;
+        }
+        mkMinute=new String(nowDateTime.getMinutes());
+        if(mkMinute.length==1){
+            mkMinute="0"+mkMinute;
+        }
+        mkSecond=new String(nowDateTime.getSeconds());
+        if(mkSecond.length==1){
+            mkSecond="0"+mkSecond;
+        }
+        var runDateTime=mkHour+":"+mkMinute+":"+mkSecond;
+        $("#css_time_run").html(runDateTime);
+     },1000);
+});
+/*----*/
     </script>
 
 

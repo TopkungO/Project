@@ -13,6 +13,7 @@
               <p><b>เวลาที่ตั้งอาหาร :</b><span id=date_food></span></p><br>
               <p><b>ปริมาณอาหารที่กำหนด :</b><span id=setfood></span></p>
               <p><b>นำ้หนัก :</b><span id=load_call></span></p>
+              <p><b>เวลา :</b><span id=css_time_run><?=date("H:i:s");?></span><b> น.</b></p>
             </div>
         </div>
         <div class="col-sm-6">
